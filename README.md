@@ -8,10 +8,10 @@ Dadum         | Uppgift | Status
 0924mån | Personlig sida |
 0925tis  |Personlig sida/Portfoliosida  |
 0926ons | Kontaktsida |
-0927tors | Content Cell |
-0928fre  | Content Cell | 
-0929lör+0930sön   | Content Cell | 
-1001mån  | Content Cell | 
+0927tors | Karta |
+0928fre  |  Sparad kontaktdata | 
+0929lör+0930sön   | Visa mer | 
+1001mån  | Fixa till | 
 1002tis  | Inlämning | 
 
 

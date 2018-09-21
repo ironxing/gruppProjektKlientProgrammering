@@ -1,0 +1,10 @@
+              <div>
+                <img src="pics/bildspel2.jpg">
+              </div>
+
+              <div>
+                <img src="pics/bildspel1.jpg" >
+              </div>
+
+
+              https://www.w3schools.com/howto/howto_js_slideshow.asp

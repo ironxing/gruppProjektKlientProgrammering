@@ -1,19 +1,7 @@
 # gruppProjektKlientProgrammering
 
 ## tidplanering:
-Dadum         | Uppgift | Status
-------------- | ------------- | -------------
-0921fre  |set up | 
-0922lör+0923sön | struktur / gemensamCSS / startsida/ presentationssida |
-0924mån | Personlig sida |
-0925tis  |Personlig sida/Portfoliosida  |
-0926ons | Kontaktsida |
-0927tors | Karta |
-0928fre  |  Sparad kontaktdata | 
-0929lör+0930sön   | Visa mer | 
-1001mån  | Fixa till | 
-1002tis  | Inlämning | 
-
+https://docs.google.com/spreadsheets/d/1Yz-CFj9Sb72Edh0xRIad3jc7WyPdA3SyJdh5SrLIN94/edit?usp=sharing
 
 
 ## Projektets olika sidor

@@ -1,0 +1,28 @@
+#kontaktform{
+    width: 50%;
+    padding: 5px;
+    margin: 100px auto;
+    box-shadow: 1px 1px 8px #617080;
+}
+
+.namnFalt, mailFalt, .telFalt, .medFalt {
+    display: block;
+    width: 400px;
+    text-align: left;
+    margin-right: 10px;
+}
+
+       
+#map {
+    float:right;
+    height: 400px;  
+    width: 100%; 
+   }
+
+
+
+.friText {
+    padding-top: 20px;
+    width: 90%;
+    margin: auto;
+}

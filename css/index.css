@@ -1,0 +1,40 @@
+.bildSpel-container {
+    position: relative;
+    text-align: center;
+    color: white;
+    width: 100%;
+	height: 45vh;;
+    overflow: hidden;
+}
+
+    .bildSpel-container img{
+        position: relative;
+        width: 100%;
+        min-height: 200px;
+    }
+
+    .bildSpel-container div{
+        position: absolute;
+        margin:auto;
+        top: 60%;
+        left: 60%;
+        margin: auto;
+        color: #617080;
+        font-size:20px;
+        background-color:#ffffff;
+        opacity: 0.8;
+        padding: 5px;
+    }
+
+.welcome-container {
+    margin-left: 10%;
+    margin-right:10%;
+    text-align: center;
+    color: #617080;
+    
+}
+
+.welcome-container p{
+    padding-top: 20px;
+}
+

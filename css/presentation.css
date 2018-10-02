@@ -134,6 +134,10 @@
         color: blue;
     }
 
+    .tredingTable .contriRow {
+        display: none; /*Börja med hidden, ändras med js*/
+    }
+
     .tredingTable tr{
         background-color: rgba(97, 112, 128, 0.3);
     }

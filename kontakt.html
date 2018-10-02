@@ -5,11 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Kontakt</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/x-icon" href="pics/icon.ico" />
     <link rel="stylesheet" type="text/css" media="screen" href="css/bas.css"/>
     <link rel="stylesheet" type="text/css" media="screen" href="css/kontakt.css"/>
     <script src="js/jquery.js"></script>
     <script src="js/bas.js"></script>
     <script src="js/kontakt.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     
 </head>
 <body onload="displayCred();">
@@ -48,24 +50,24 @@
         </div>  
     </div>
 
-
-    
-       
         <div class="friText">
-            <p>Via detta formulär kan du enkelt ta kontakt med oss. Var vänlig fyll i alla fält samt vad du önskar meddela oss så tar vi kontakt med dig så fort vi har möjlighet. Tack på förhand!</p>
+            <p>Via detta formul&auml;r kan du enkelt ta kontakt med oss. Var v&auml;nlig fyll i alla f&auml;lt samt vad du &ouml;nskar meddela oss så tar vi kontakt med dig så fort vi har m&ouml;jlighet. Tack på f&ouml;rhand!</p>
          </div>
           
 
          <div class="friForm">
+                
 
             <section id="kontaktform">
                 <form>
-                    <p>Ditt Namn:</p><input type="text" id="namnFalt" minlength="3" onkeydown="checkNamn()" required>
+                    <p>Ditt Namn:</p><input type="text" id="namnFalt" minlength="3" onkeydown="checkNamn()" pattern="[a-z]{3,17}" required>
                     <p>Din E-mail:</p> <input type="email" id="mailFalt" required>
                     <p>Ditt Telefonnummer:</p><input type="tel" id="telFalt" pattern="[0-9]{8,12}" required>
                     <p>Ditt Meddelande:</p> <textarea id="medFalt" minlength="1" required></textarea>
-                    <p><input type="submit" value="Skicka Meddelande" onclick="kollaNamn()"></p>
-                       
+                    <p><input id="ziButn" type="submit" value="Skicka Meddelande" onclick="kollaNamn()"></p>
+                    <div id="handen"><i class="far fa-hand-paper fa-3x"></i></div> 
+                    <div id="tummeUp"><i class="far fa-hand-peace fa-3x"></i></div>
+                    <p id="sentText">Skickat!</p> 
                 </form>
             </section>
            
@@ -97,7 +99,7 @@
     
 
     <div class="footer">
-        <p>Address Långhuset, Fakultetsgatan 1, 702 81 Örebro</p>
+        <p>Address Långhuset, Fakultetsgatan 1, 702 81 &Ouml;rebro</p>
     </div>
 </body>
 </html>

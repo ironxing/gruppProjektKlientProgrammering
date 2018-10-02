@@ -1,3 +1,39 @@
+#handen {
+   position: absolute;
+    top: 33%;
+    right: 50%;
+}
+#tummeUp {
+    position: absolute;
+    display: none;
+    top: 25%;
+    right: 50%;
+}
+#sentText {
+    display: none;
+}
+ 
+ @media only screen and (min-width: 768px) {
+    #handen {
+        position: absolute;
+        top: 25%;
+        right: 50%;
+    }
+
+    #tummeUp {
+        position: absolute;
+        display: none;
+        top: 25%;
+        right: 50%;
+    }
+    #sentText {
+        display: none;
+    }
+   
+}
+
+
+
 #kontaktform{
     width: 50%;
     padding: 5px;
@@ -26,3 +62,4 @@
     width: 90%;
     margin: auto;
 }
+

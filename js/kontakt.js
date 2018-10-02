@@ -97,6 +97,46 @@ function kollaMed() {
         console.log("nope");
     } else {
         saveCrap();
-        alert("ditt meddelande har skickats");
+        flyttaVanster();
+        fadeaUt();
+        nyaIn();
+        visaText();
+
+      
     }
 }
+
+function flyttaVanster() {
+ 
+    
+    $("#handen").animate({
+        left: '+=40px'
+        
+        
+    },400,  );
+    
+}
+
+function fadeaUt() {
+    $("#handen").fadeOut("fast");        
+}
+
+function nyaIn() {
+    $("#tummeUp").fadeIn("slow");
+
+}
+
+
+
+function visaText() {
+    var tumme = document.getElementById("tummeUp");
+    var skickat = document.getElementById("sentText")
+
+    tumme.appendChild(skickat);
+
+    $("#sentText").fadeIn("slow");
+
+    
+}
+
+

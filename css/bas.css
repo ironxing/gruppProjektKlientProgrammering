@@ -1,0 +1,192 @@
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+*{
+	box-sizing: border-box; /* Gör att padding räknas med i elements bredd/höjd */
+	margin: 0;
+	padding: 0;
+}
+
+body {
+
+    margin: 0;
+    padding: 0;
+	width:100%;
+    height:100%;
+    font-family: museo-sans,"Helvetica Neue",Helvetica,Aria,sans-serif;
+}
+
+main {
+    height: 100%;
+}
+
+
+/*responsive layout*/
+
+    /* For mobile: */
+    .header {
+        padding-left: 20px;
+        padding-right:20px;
+
+        
+    }
+
+    .header .menuDiv li {
+        display: none;
+    }
+
+
+
+    #menuIcon-container{
+        cursor: pointer;
+    }
+
+    .menuIcon {
+        width: 35px;
+        height: 5px;
+        background: #617080;
+        margin: 6px 0;
+    }
+
+    .dropDown-content { 
+        display: none;
+        position: absolute;
+        background: #617080;
+        opacity: 0.9;
+        overflow: auto;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+        right: 10px;
+        position: fixed;
+        
+    }
+
+    .dropDown-content a { 
+        color: #ffffff;
+        text-decoration: none;
+        display: block;
+        padding: 12px 16px;
+    }
+
+    .dropDown-content a:hover { 
+        color: #617080;
+        background-color: #ffffff;
+        opacity: 0.9;
+    }
+
+    .jonas img, .kardo img, .xing img {
+        width: 100px;
+    }
+
+    /* For desktop: */
+    @media only screen and (min-width: 768px) {
+        .header {
+            margin:90%;
+        }
+        
+
+        .header .menuDiv li {
+            display: inline;
+        }
+        
+        .menuIcon {
+            display: none;
+        }
+
+        .dropDown{
+            display: none;
+        }
+
+        .dropDown-content{
+            display: none;
+        }
+        .work {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            
+        }
+        .elementHold1, .elementHold2, .elementHold3, .elementHold4, .elementHold5, .elementHold6 {
+         display: inline-block;
+        }   
+
+        .jonas img, .kardo img, .xing img {
+            width: 200px;
+            margin-top: 50px;
+        }
+    }
+
+/*color font and other*/
+
+.header {
+    margin: auto;
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+    overflow: hidden;
+    background: #f7f7f7;z-index: +1;
+
+    
+   
+}
+    .header .logo {
+        float: left;
+    }
+        .header .logo_box .logo {
+            width: 100%;
+            height: 100%;
+        }
+
+    .header .menuDiv {
+        float: right;
+    }
+
+        .header .menuDiv ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+            .header .menuDiv li a{
+                text-decoration: none;
+                padding: 16px;
+                text-transform: uppercase;
+                font-size: 18px;
+                color: #617080;
+                float: right;
+            
+            }
+
+            .header .menuDiv a:hover {
+                color: #617080;
+                filter: blur(1px);
+            }
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%
+    }
+
+
+.footer {
+    background: #617080;
+    padding: 25px 25px;
+    position: absolute; 
+    right: 0;
+    left: 0;
+
+    margin-top: 30px;
+}
+
+.footer p{
+    text-align: center;
+    color: white;
+    font-size: 16px;
+
+}
+
+
+

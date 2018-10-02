@@ -1,3 +1,5 @@
+// fyller textfälten med infon som fyllts i tidigare. 
+
 function displayCred() {     
     var a = localStorage.getItem(1);
     var b = localStorage.getItem(2);
@@ -23,6 +25,7 @@ if (a1 === "") {
 }
 }
 
+// metod för att se om namnet är mindre än tre karaktärer vilket skapar röd text.
 function checkNamn() {
     var strText = document.getElementById("namnFalt").value;
     var strText2 = document.getElementById("namnFalt");
@@ -33,28 +36,34 @@ function checkNamn() {
      strText2.style.color = "black";
     }
 }
+// hämtar input från olika fälten i kontaktformuläret och placerar dom i Local Storage, samt rensar fälten.
+function saveInput() {
 
-function saveCrap() {
+   // hämtar input och lagrar i variabler. 
 
-   
     var namnFalt = document.getElementById("namnFalt").value;
     var mailFalt = document.getElementById("mailFalt").value;
     var telFalt = document.getElementById("telFalt").value;
     var medFalt = document.getElementById("medFalt").value;
+    // placerar datan i Local Storage.
     localStorage.setItem("1", namnFalt);
     localStorage.setItem("2", mailFalt);
     localStorage.setItem("3", telFalt);
     localStorage.setItem ("4", medFalt);
+    // rensar fälten.
     document.getElementById("namnFalt").value = "";
     document.getElementById("mailFalt").value = "";
     document.getElementById("telFalt").value = "";
     document.getElementById("medFalt").value = "";
 }
 
+// rensar Local Storage.
 
 function rensaAllt() {
     localStorage.clear();
 }
+
+// metod för att säkerställa att man inte skickar in med tom namnfält.
 
 function kollaNamn() {
     var a2 = document.getElementById("namnFalt").value
@@ -67,7 +76,7 @@ function kollaNamn() {
     }
 
 }
-
+// metod för att säkerställa att man inte skickar in med tom mailfält.
 function kollaMail() {
     var b2 = document.getElementById("mailFalt").value
 
@@ -78,6 +87,7 @@ function kollaMail() {
     }
 
 }
+// metod för att säkerställa att man inte skickar in med tomt telefonfält.
 
 function kollaTel() {
     var c2 = document.getElementById("telFalt").value
@@ -90,13 +100,16 @@ function kollaTel() {
 
 }
 
+// metod för att säkerställa att man inte skickar in med tomt meddelandefält.
+// om allt är OK skickar den formuläret samt anropar animeringen.
+
 function kollaMed() {
     var d2 = document.getElementById("medFalt").value
 
     if(d2==="") {
         console.log("nope");
     } else {
-        saveCrap();
+        saveInput();
         flyttaVanster();
         fadeaUt();
         nyaIn();
@@ -105,6 +118,8 @@ function kollaMed() {
       
     }
 }
+
+// animerar handen att gå vänster.
 
 function flyttaVanster() {
  
@@ -117,9 +132,13 @@ function flyttaVanster() {
     
 }
 
+// Animerar bort handen.
+
 function fadeaUt() {
     $("#handen").fadeOut("fast");        
 }
+
+// animerar fram nya bilden.
 
 function nyaIn() {
     $("#tummeUp").fadeIn("slow");
@@ -127,6 +146,7 @@ function nyaIn() {
 }
 
 
+// fäster en text på bilden samt gör den synlig.
 
 function visaText() {
     var tumme = document.getElementById("tummeUp");
@@ -139,4 +159,14 @@ function visaText() {
     
 }
 
+// KARTAN 
 
+function initMap() {
+       
+    var uluru = {lat: 59.2552, lng: 15.2482};
+
+ var map = new google.maps.Map(
+ document.getElementById('map'), {zoom: 15, center: uluru});
+
+var marker = new google.maps.Marker({position: uluru, map: map});
+}

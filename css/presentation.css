@@ -64,6 +64,7 @@
 
 
 
+
     
 }
 
@@ -73,8 +74,22 @@
     text-shadow: 1px 1px 1px rgba(0,0,0,.1);
     letter-spacing: .5px;
     font-size: 24px;
-    padding:  100px;
+
 }
+
+    .profiler {
+        display: flex;
+        width: 90%;
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+        .jonas, .kardo, .xing {
+            margin: 25px;
+            display: inline;
+
+        }
 .contentBoxTable {
     color: #617080;
     margin-top: 80px;
@@ -148,7 +163,7 @@
 
     .tredingTable th {
         text-align: left;
-        background-color: rgba(97, 112, 128);
+        background-color: rgba(97, 112, 128, 1);
         color: white;
     }
 

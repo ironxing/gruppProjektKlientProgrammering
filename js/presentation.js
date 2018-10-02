@@ -10,6 +10,7 @@ $(document).ready(()=>{$(document).ready(()=>{
             var listArr = data.items;
             var trends = listArr.slice(0,5);
 
+            /* Hämtar trender */
             trends.forEach((trend)=>{
                 var trendUrl = trend.html_url;
                 var userUrl = trend.owner.html_url;
@@ -18,6 +19,8 @@ $(document).ready(()=>{$(document).ready(()=>{
                 fetch(contributorUrl)        
                 .then(response => response.json())
                 .then(data => {
+                    
+                    /* Hämtar contributors */ 
                     var contributorList = 'Top 30 Contributors:';
                     data.forEach((data)=>{
                         var aLogin = data.login;

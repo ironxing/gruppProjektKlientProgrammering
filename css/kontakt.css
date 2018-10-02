@@ -1,18 +1,27 @@
+/*positionerar handen */
+
 #handen {
    position: absolute;
     top: 33%;
     right: 50%;
 }
+
+/* postionerar och gömmer bild två*/
+
 #tummeUp {
     position: absolute;
     display: none;
-    top: 25%;
+    top: 33%;
     right: 50%;
 }
+
+/* gömmer skickat texten*/
+
 #sentText {
     display: none;
 }
- 
+ /* definerar regler för skärmar med minst 768px storlek */
+
  @media only screen and (min-width: 768px) {
     #handen {
         position: absolute;
@@ -32,7 +41,7 @@
    
 }
 
-
+/* stylear kontaktformen */
 
 #kontaktform{
     width: 50%;
@@ -41,6 +50,8 @@
     box-shadow: 1px 1px 8px #617080;
 }
 
+/* stylar input textfalten */
+
 .namnFalt, mailFalt, .telFalt, .medFalt {
     display: block;
     width: 400px;
@@ -48,18 +59,36 @@
     margin-right: 10px;
 }
 
-       
+/* sätter värden för kartan */
+
 #map {
-    float:right;
-    height: 400px;  
+
+    height: 440px;  
     width: 100%; 
    }
 
-
+/* stylar väkomsttexten */ 
 
 .friText {
     padding-top: 20px;
     width: 90%;
     margin: auto;
+    
 }
 
+    .friText p {
+        color: black;
+		text-shadow: 1px 1px 1px rgba(0,0,0,.1);
+		letter-spacing: .5px;
+		font-size: 16px;
+		line-height: 1.5;
+    }
+
+        .friText h1 {
+            color: black;
+            text-shadow: 5px 5px 5px rgba(0,0,0,.1);
+            letter-spacing: .5px;
+            margin-top: 50px;
+
+        }
+   

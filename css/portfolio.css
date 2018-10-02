@@ -7,52 +7,33 @@ h1 {
 	margin-bottom: 10px;
 	text-transform: uppercase;
 	}
-	
-.main {
-	width: 98%;
-	margin: 0 auto;
-}
-    
+
 /*----HEADER---*/
 header {
 	margin: 0px 0 100px 0;
-	padding: 100px;
+	padding: 75px;
 	text-align: center;
 	background: #617080;
-
 }
-
-    header p {
-
+	
+	header p {
 		color: white;
 		font-size: 18px;
-		display: inline;
-		text-align: center;
 		text-shadow: 1px 1px 1px rgba(0,0,0,.1);
 		letter-spacing: .5px;
 		line-height: 1.5;
     } 
 
-	h3 {
-		color: black;
-		text-shadow: 5px 5px 5px rgba(0,0,0,.10);
-		letter-spacing: .5px;
-	}
 /*----WORK----*/
-.work {
 
-}
  .elementHold1, .elementHold2, .elementHold3, .elementHold4, .elementHold5, .elementHold6 {
 	background: #617080;
 	box-shadow: 0 2px 5px rgba(0, 0, 0, 10);
 	margin-bottom: 50px;
-	width: 100%;
 	max-width: 360px;
 	margin-right: auto;
 	margin-left: auto;
 	text-align: center;
-
-
 }
 
 .work h3  {
@@ -70,9 +51,6 @@ header {
 		.work a img {
 			margin: 1%;
 			max-width: 350px;
-			display: inline-block;
-
-		
 		}
 			.work #myBtn1, #myBtn2, #myBtn3, #myBtn4, #myBtn5, #myBtn6 {
 				font-size: 12px;
@@ -83,7 +61,6 @@ header {
 				text-align: center;
 				border: 2px solid #13A3FD;
 				text-decoration: none;
-				margin: 1 20 -20 20;
 				text-shadow: 1px 1px 1px rgba(0,0,0,.1);
     			letter-spacing: .5px;
 			}
@@ -92,7 +69,7 @@ header {
                 }
 
 /* WHAT WE DO */
-.whatWeDo {
+.weOffer {
 	text-align: center;
 	margin: 150px 0 150px 0;
 	background: #617080;
@@ -102,19 +79,18 @@ header {
 
 }
 
-    .whatWeDo h1 {
+    .weOffer h1 {
 		color: white;
 		text-shadow: 5px 5px 5px rgba(0,0,0,.1);
 		letter-spacing: .5px;
-		font-style: transparent
 
     }
     
-        .whatWeDo ul {
+        .weOffer ul {
             list-style: none;
             margin-top: 30px;
         }
-            .whatWeDo li {
+            .weOffer li {
                 color: white;
                 font-size: 16px;
 				margin-bottom: 20px;

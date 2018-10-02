@@ -1,9 +1,35 @@
+header {
+	margin: 0px 0 0px 0;
+	padding: 75px;
+	text-align: center;
+	background: #617080;
+
+}
+
+    header p {
+
+		color: white;
+		font-size: 18px;
+		display: inline;
+		text-align: center;
+		text-shadow: 1px 1px 1px rgba(0,0,0,.1);
+		letter-spacing: .5px;
+		line-height: 1.5;
+    } 
+        header h1 {
+            font-size: 25px;
+            color: white;
+            /*color: #13A3FD;*/
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            }
+
 .bildSpel-container {
     position: relative;
     text-align: center;
     color: white;
     width: 100%;
-	height: 45vh;;
+	height: 45vh;
     overflow: hidden;
 }
 
@@ -30,11 +56,28 @@
     margin-left: 10%;
     margin-right:10%;
     text-align: center;
-    color: #617080;
-    
+    color: #617080;    
+
 }
 
+.welcome-container h1 {
+    color: black;
+    text-shadow: 5px 5px 5px rgba(0,0,0,.1);
+    letter-spacing: .5px;
+    
+
+}
 .welcome-container p{
     padding-top: 20px;
+    color: black;
+    text-shadow: 1px 1px 1px rgba(0,0,0,.1);
+    letter-spacing: .5px;
+    font-size: 24px;
+    line-height: 1.5;
+}
+
+.footer {
+    bottom: 0;
+
 }
 

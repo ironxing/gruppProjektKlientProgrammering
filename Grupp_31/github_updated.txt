@@ -1,0 +1,32 @@
+- download and install git to your computer
+  https://git-scm.com/downloads
+
+- register an account on Github
+
+- create a repository or ask for the address for the project repository
+
+- create a folder on your computer and a file in it (whatever file)
+  eg: a folder: C:\Users\Xing\Desktop\testgithub
+      and a file: "blabla.txt"
+
+- in terminal (cmd line) do this:
+	- use "cd" to navigate to your working folder
+	  eg: cd Desktop\groupWorkMyLocalFolder
+
+	> git init
+	> git add *
+	> git commit -m "in this quotes give a whatever name for your commit"
+	> git remote add origin https://github.com/ironxing/gruppProjektKlientProgrammering.git
+
+	- create a branch and push only to your own branch. Don't push to master.
+	  eg:
+
+	> git branch Xing_feature
+	> git checkout Xing_feature
+	> git push -u origin Xing_feature
+
+- next time:
+
+	> git add *
+	> git commit -m "blablaname"
+	> git push -u origin Xing_feature

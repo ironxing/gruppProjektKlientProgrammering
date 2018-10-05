@@ -1,6 +1,10 @@
 $(document).ready(()=>{
     
-    var isValid = true;
+    var isValidNamn = false;
+    var isValidMail = false;
+    var isValidTel = false;
+    var isValidMed = false;
+
     $('.check').addClass('hidden');
 
     $('#namnFalt').on('keyup',()=>{
@@ -24,11 +28,11 @@ $(document).ready(()=>{
         if (/^[a-z0-9_\-]{3,100}$/i.test(namn)) {
             $('#namnCheck').removeClass('hidden');
             $('#namnCheck').attr('src','pics/check.png');
-            isValid = true;
+            isValidNamn = true;
         } else{
             $('#namnCheck').removeClass('hidden');
             $('#namnCheck').attr('src','pics/cross.png');
-            isValid = false;
+            isValidNamn = false;
         }
     }
 
@@ -37,11 +41,11 @@ $(document).ready(()=>{
         if (/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]{1,60}@[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]{1,60}\.[a-zA-Z]{1,3}$/i.test(email)) {
             $('#mailCheck').removeClass('hidden');
             $('#mailCheck').attr('src','pics/check.png');
-            isValid = true;
+            isValidMail = true;
         } else{
             $('#mailCheck').removeClass('hidden');
             $('#mailCheck').attr('src','pics/cross.png');
-            isValid = false;
+            isValidMail = false;
         }
     }
 
@@ -50,11 +54,11 @@ $(document).ready(()=>{
         if (/^[0-9]{7,10}$/i.test(tel)) {
             $('#telCheck').removeClass('hidden');
             $('#telCheck').attr('src','pics/check.png');
-            isValid = true;
+            isValidTel = true;
         } else{
             $('#telCheck').removeClass('hidden');
             $('#telCheck').attr('src','pics/cross.png');
-            isValid = false;
+            isValidTel = false;
         }
     }
 
@@ -63,18 +67,17 @@ $(document).ready(()=>{
         if (/^[a-z0-9_\-]{3,100}$/i.test(med)) {
             $('#medCheck').removeClass('hidden');
             $('#medCheck').attr('src','pics/check.png');
-            isValid = true;
+            isValidMed = true;
         } else{
             $('#medCheck').removeClass('hidden');
             $('#medCheck').attr('src','pics/cross.png');
-            isValid = false;
+            isValidMed = false;
         }
     }
 
-    $('#ziButn').click(()=>{
-        console.log(isValid);
-        if(isValid){
-            console.log("bla");
+    $('#ziButn').click(function(e){
+        e.preventDefault();
+        if(isValidNamn&&isValidMail&&isValidTel&&isValidMed){
             saveInput();
             flyttaVanster();
             fadeaUt();

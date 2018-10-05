@@ -15,7 +15,6 @@
     
 </head>
 <body onload="displayCred(); initMap();">
-
     <!-- HEADER -->
     <div class="header" id="myHeader">
         <div class="logo">
@@ -55,23 +54,43 @@
             <p>Via detta formul&auml;r kan du enkelt ta kontakt med oss. Var v&auml;nlig fyll i alla f&auml;lt samt vad du &ouml;nskar meddela oss så tar vi kontakt med dig så fort vi har m&ouml;jlighet. Tack på f&ouml;rhand!</p>
          </div>
           
+         <div class="bilderna">
+            <div id="handen"><i class="far fa-hand-paper fa-3x"></i></div> 
+            <div id="tummeUp"><i class="far fa-hand-peace fa-3x"></i></div>
+         </div>
 
-         <div class="friForm">
-                
-        <!-- KONTAKT FORM -->                          
-            <section id="kontaktform">
-                <form>
-                    <p>Ditt Namn:</p><input type="text" id="namnFalt" minlength="3" onkeydown="checkNamn()" pattern="[a-z]{3,17}" required>
-                    <p>Din E-mail:</p> <input type="email" id="mailFalt" required>
-                    <p>Ditt Telefonnummer:</p><input type="tel" id="telFalt" pattern="[0-9]{8,12}" required>
-                    <p>Ditt Meddelande:</p> <textarea id="medFalt" minlength="1" required></textarea>
-                    <p><input id="ziButn" type="submit" value="Skicka Meddelande" onclick="kollaNamn()"></p>
-                    <div id="handen"><i class="far fa-hand-paper fa-3x"></i></div> 
-                    <div id="tummeUp"><i class="far fa-hand-peace fa-3x"></i></div>
-                    <p id="sentText">Skickat!</p> 
-                </form>
-            </section>
-           
+         <div class="friForm">        
+            <!-- KONTAKT FORM -->                          
+                <section id="kontaktform">
+                    <form>
+                        <p>Ditt Namn:</p>
+                        <div class="kontaktInput" id="nameFaltdiv">
+                            <input type="text" id="namnFalt"> 
+                            <img class="check" id="namnCheck" alt="check" width="20">
+                        </div>
+                        
+                        <p>Din E-mail:</p>
+                        <div class="kontaktInput">
+                            <input type="email" id="mailFalt">
+                            <img class="check" id="mailCheck"  alt="check" width="20">
+                        </div>
+                        
+                        <p>Ditt Telefonnummer:</p>
+                        <div class="kontaktInput">
+                            <input type="tel" id="telFalt">
+                            <img class="check" id="telCheck" alt="check" width="20">
+                        </div>
+    
+                        <p>Ditt Meddelande:</p> 
+                        <div class="kontaktField">
+                            <textarea id="medFalt"></textarea>
+                            <img class="check" id="medCheck"  alt="check" width="20">
+                        </div>
+    
+                        <p><input id="ziButn" type="submit" value="Skicka Meddelande"></p>
+                        <p id="sentText">Skickat!</p> 
+                    </form>
+                </section>   
             </div>
 
 

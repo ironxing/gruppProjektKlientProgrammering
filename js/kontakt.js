@@ -1,29 +1,91 @@
-// fyller textfälten med infon som fyllts i tidigare. 
-
-function displayCred() {     
-    var a = localStorage.getItem(1);
-    var b = localStorage.getItem(2);
-    var c = localStorage.getItem(3);
-    var d = localStorage.getItem(4);
+$(document).ready(()=>{
     
-    
+    var isValid = true;
+    $('.check').addClass('hidden');
 
-var a1 = document.getElementById("namnFalt").value
-var b1 = document.getElementById("mailFalt").value
-var c1 = document.getElementById("telFalt").value
-var d1 = document.getElementById("medFalt").value
+    $('#namnFalt').on('keyup',()=>{
+        kollaNamn();
+    })
 
-if (a1 === "") {
-    document.getElementById("namnFalt").value = a;
-    document.getElementById("mailFalt").value = b;
-    document.getElementById("telFalt").value = c;
-    document.getElementById("medFalt").value = d;
+    $('#mailFalt').on('keyup',()=>{
+        kollaEmail();
+    })
 
-    rensaAllt();
+    $('#telFalt').on('keyup',()=>{
+        kollaTel();
+    })
 
+    $('#medFalt').on('keyup',()=>{
+        kollaMed();
+    })
 
-}
-}
+    function kollaNamn(){
+        var namn = $('#namnFalt').val();
+        if (/^[a-z0-9_\-]{3,100}$/i.test(namn)) {
+            $('#namnCheck').removeClass('hidden');
+            $('#namnCheck').attr('src','pics/check.png');
+            isValid = true;
+        } else{
+            $('#namnCheck').removeClass('hidden');
+            $('#namnCheck').attr('src','pics/cross.png');
+            isValid = false;
+        }
+    }
+
+    function kollaEmail(){
+        var email = $('#mailFalt').val();
+        if (/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]{1,60}@[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]{1,60}\.[a-zA-Z]{1,3}$/i.test(email)) {
+            $('#mailCheck').removeClass('hidden');
+            $('#mailCheck').attr('src','pics/check.png');
+            isValid = true;
+        } else{
+            $('#mailCheck').removeClass('hidden');
+            $('#mailCheck').attr('src','pics/cross.png');
+            isValid = false;
+        }
+    }
+
+    function kollaTel(){
+        var tel = $('#telFalt').val();
+        if (/^[0-9]{7,10}$/i.test(tel)) {
+            $('#telCheck').removeClass('hidden');
+            $('#telCheck').attr('src','pics/check.png');
+            isValid = true;
+        } else{
+            $('#telCheck').removeClass('hidden');
+            $('#telCheck').attr('src','pics/cross.png');
+            isValid = false;
+        }
+    }
+
+    function kollaMed(){
+        var med = $('#medFalt').val();
+        if (/^[a-z0-9_\-]{3,100}$/i.test(med)) {
+            $('#medCheck').removeClass('hidden');
+            $('#medCheck').attr('src','pics/check.png');
+            isValid = true;
+        } else{
+            $('#medCheck').removeClass('hidden');
+            $('#medCheck').attr('src','pics/cross.png');
+            isValid = false;
+        }
+    }
+
+    $('#ziButn').click(()=>{
+        console.log(isValid);
+        if(isValid){
+            console.log("bla");
+            saveInput();
+            flyttaVanster();
+            fadeaUt();
+            nyaIn();
+            visaText();
+        }  
+        else{
+            alert("Vänligen fyll i alla fält!");
+        }
+    })
+
 
 // metod för att se om namnet är mindre än tre karaktärer vilket skapar röd text.
 function checkNamn() {
@@ -57,68 +119,6 @@ function saveInput() {
     document.getElementById("medFalt").value = "";
 }
 
-// rensar Local Storage.
-
-function rensaAllt() {
-    localStorage.clear();
-}
-
-// metod för att säkerställa att man inte skickar in med tom namnfält.
-
-function kollaNamn() {
-    var a2 = document.getElementById("namnFalt").value
-    
-    if (a2 ==="") {
-        console.log("nope");
-    } else {
-        kollaMail();
-        
-    }
-
-}
-// metod för att säkerställa att man inte skickar in med tom mailfält.
-function kollaMail() {
-    var b2 = document.getElementById("mailFalt").value
-
-    if(b2 ==="") {
-        console.log("nope");
-    } else {
-        kollaTel();
-    }
-
-}
-// metod för att säkerställa att man inte skickar in med tomt telefonfält.
-
-function kollaTel() {
-    var c2 = document.getElementById("telFalt").value
-
-    if(c2==="") {
-        console.log("nope");
-    } else {
-        kollaMed();
-    }
-
-}
-
-// metod för att säkerställa att man inte skickar in med tomt meddelandefält.
-// om allt är OK skickar den formuläret samt anropar animeringen.
-
-function kollaMed() {
-    var d2 = document.getElementById("medFalt").value
-
-    if(d2==="") {
-        console.log("nope");
-    } else {
-        saveInput();
-        flyttaVanster();
-        fadeaUt();
-        nyaIn();
-        visaText();
-
-      
-    }
-}
-
 // animerar handen att gå vänster.
 
 function flyttaVanster() {
@@ -142,7 +142,6 @@ function fadeaUt() {
 
 function nyaIn() {
     $("#tummeUp").fadeIn("slow");
-
 }
 
 
@@ -155,9 +154,11 @@ function visaText() {
     tumme.appendChild(skickat);
 
     $("#sentText").fadeIn("slow");
-
-    
 }
+
+
+})
+
 
 // KARTAN 
 
@@ -170,3 +171,35 @@ function initMap() {
 
 var marker = new google.maps.Marker({position: uluru, map: map});
 }
+
+// fyller textfälten med infon som fyllts i tidigare. 
+
+function displayCred() {     
+    var a = localStorage.getItem(1);
+    var b = localStorage.getItem(2);
+    var c = localStorage.getItem(3);
+    var d = localStorage.getItem(4);
+    
+    
+
+var a1 = document.getElementById("namnFalt").value
+var b1 = document.getElementById("mailFalt").value
+var c1 = document.getElementById("telFalt").value
+var d1 = document.getElementById("medFalt").value
+
+if (a1 === "") {
+    document.getElementById("namnFalt").value = a;
+    document.getElementById("mailFalt").value = b;
+    document.getElementById("telFalt").value = c;
+    document.getElementById("medFalt").value = d;
+
+    rensaAllt();
+}
+}
+
+// rensar Local Storage.
+function rensaAllt() {
+    localStorage.clear();
+}
+
+

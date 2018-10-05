@@ -24,7 +24,7 @@ $(document).ready(()=> {
         $('#bildSpel-bild').attr('src', imgScrArr[currentIndex]);
         $('#bildSpel-text').text(txtArr[currentIndex]);
         currentIndex =(currentIndex+1)%imgScrArr.length;
-        $("#bildSpel-text").animate({"left" : "30px"});
+        
     }
 
 });

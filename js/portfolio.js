@@ -6,6 +6,10 @@ $(document).ready(()=>{
       var myBtn = $(this).attr("id");
 
       //Läser in vilken knapp det är som är vald för följande variabler
+      var word= 'Hello';
+      console.log(word.length);
+      console.log(word[0]);
+      console.log(word[4]);
       var index = myBtn.substr(myBtn.length -1);
       var dots = "dots"+index;
       var more = "more"+index;

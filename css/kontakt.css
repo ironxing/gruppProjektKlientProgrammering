@@ -1,19 +1,21 @@
 /*positionerar handen */
 
-#handen {
-   position: absolute;
-    top: 33%;
-    right: 50%;
-}
+.bilderna {
+    margin-left: 40%;
+ }
 
-/* postionerar och gömmer bild två*/
+    #handen {
+        position: absolute;
+    }
+
+
+/* gömmer bild två*/
 
 #tummeUp {
-    position: absolute;
     display: none;
-    top: 33%;
-    right: 50%;
 }
+
+
 
 /* gömmer skickat texten*/
 
@@ -23,18 +25,13 @@
  /* definerar regler för skärmar med minst 768px storlek */
 
  @media only screen and (min-width: 768px) {
-    #handen {
-        position: absolute;
-        top: 25%;
-        right: 50%;
-    }
-
-    #tummeUp {
-        position: absolute;
-        display: none;
-        top: 25%;
-        right: 50%;
-    }
+   
+    .bilderna {
+       margin-left: 40%;
+        
+     }
+   
+   
     #sentText {
         display: none;
     }
@@ -92,3 +89,25 @@
 
         }
    
+
+  
+
+        .hidden {
+            display:none;
+        }  
+        
+        .kontaktInput {
+            display: flex;
+            height: 25px;
+            text-align: center;
+        }
+        
+        .kontaktField {
+            display: flex;
+            height: 50px;
+            text-align: center;
+        }
+        
+        .kontaktField img{
+            height: 25px;
+        }

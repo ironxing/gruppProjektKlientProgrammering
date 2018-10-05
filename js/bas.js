@@ -6,7 +6,6 @@ $(document).ready(()=> {
 
     $(document).mouseup(function (e) {
         if (!$('#menuIcon-container').is(e.target) // if the target of the click isn't the container...
-            && $('#menuIcon-container').has(e.target).length === 0) // ... nor a descendant of the container
         {
             $('#dropDown-content').hide();
         }

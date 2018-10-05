@@ -23,8 +23,6 @@ $(document).ready(()=> {
     function visaBild(){
         $('#bildSpel-bild').attr('src', imgScrArr[currentIndex]);
         $('#bildSpel-text').text(txtArr[currentIndex]);
-        currentIndex =(currentIndex+1)%imgScrArr.length;
-        
+        currentIndex =(currentIndex+1)%imgScrArr.length;        
     }
-
 });

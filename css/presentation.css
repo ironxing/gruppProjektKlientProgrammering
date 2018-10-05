@@ -26,23 +26,17 @@
         position: relative;
         text-align: center;
     }
-
-
 }
 
 
 /*common*/
 .contentBox {
- 
     padding: 30px 30px 50px;
     font-family: museo-sans,"Helvetica Neue",Helvetica,Aria,sans-serif;
     font-weight: 200;
     color: #ffffff;
-
     min-height: 300px;
     box-shadow: inset 0 1px 3px rgba(0,0,0,.2);
-
-
 }
 
 .contentBox h1 {
@@ -61,11 +55,6 @@
     top: 6rem;
     text-shadow: 1px 1px 1px rgba(0,0,0,.1);
     letter-spacing: .5px;
-
-
-
-
-    
 }
 
 .contentBox a {
@@ -74,7 +63,6 @@
     text-shadow: 1px 1px 1px rgba(0,0,0,.1);
     letter-spacing: .5px;
     font-size: 24px;
-
 }
 
     .profiler {
@@ -130,10 +118,6 @@
     text-align: center;
 }
 
-#trender{
-  
-}
-
 #trender h1, #trender p {
     text-align: center;
 }
@@ -170,7 +154,7 @@
     .trendingJS {
         min-width: 300px;
     }
+
     #trendingCSS{
         min-width:300px;
-
     }

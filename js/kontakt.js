@@ -7,15 +7,9 @@ $(document).ready(()=>{
 
     $('.check').addClass('hidden');
 
-    function kollaAllt(){
-        kollaNamn();
-        kollaEmail();
-        kollaTel();
-        kollaMed();
-    }
-
     $('#namnFalt').on('keyup',()=>{
         kollaNamn();
+        checkNamnChangeColor();
     })
 
     $('#mailFalt').on('keyup',()=>{
@@ -82,6 +76,13 @@ $(document).ready(()=>{
         }
     }
 
+    function kollaAllt(){
+        kollaNamn();
+        kollaEmail();
+        kollaTel();
+        kollaMed();
+    }
+
     $('#ziButn').click(function(e){
         e.preventDefault();
         kollaAllt();
@@ -100,7 +101,7 @@ $(document).ready(()=>{
 
 
 // metod för att se om namnet är mindre än tre karaktärer vilket skapar röd text.
-function checkNamn() {
+function checkNamnChangeColor() {
     var strText = document.getElementById("namnFalt").value;
     var strText2 = document.getElementById("namnFalt");
     
@@ -110,11 +111,11 @@ function checkNamn() {
      strText2.style.color = "black";
     }
 }
+
 // hämtar input från olika fälten i kontaktformuläret och placerar dom i Local Storage, samt rensar fälten.
 function saveInput() {
 
    // hämtar input och lagrar i variabler. 
-
     var namnFalt = document.getElementById("namnFalt").value;
     var mailFalt = document.getElementById("mailFalt").value;
     var telFalt = document.getElementById("telFalt").value;
@@ -134,31 +135,23 @@ function saveInput() {
 // animerar handen att gå vänster.
 
 function flyttaVanster() {
- 
-    
     $("#handen").animate({
         left: '+=40px'
-        
-        
     },400,  );
-    
 }
 
 // Animerar bort handen.
-
 function fadeaUt() {
     $("#handen").fadeOut("fast");        
 }
 
 // animerar fram nya bilden.
-
 function nyaIn() {
     $("#tummeUp").fadeIn("slow");
 }
 
 
 // fäster en text på bilden samt gör den synlig.
-
 function visaText() {
     var tumme = document.getElementById("tummeUp");
     var skickat = document.getElementById("sentText")
@@ -167,21 +160,15 @@ function visaText() {
 
     $("#sentText").fadeIn("slow");
 }
-
-
 })
 
 
 // KARTAN 
-
 function initMap() {
-       
     var uluru = {lat: 59.2552, lng: 15.2482};
-
- var map = new google.maps.Map(
- document.getElementById('map'), {zoom: 15, center: uluru});
-
-var marker = new google.maps.Marker({position: uluru, map: map});
+    var map = new google.maps.Map(
+    document.getElementById('map'), {zoom: 15, center: uluru});
+    var marker = new google.maps.Marker({position: uluru, map: map});
 }
 
 // fyller textfälten med infon som fyllts i tidigare. 
@@ -191,8 +178,6 @@ function displayCred() {
     var b = localStorage.getItem(2);
     var c = localStorage.getItem(3);
     var d = localStorage.getItem(4);
-    
-    
 
 var a1 = document.getElementById("namnFalt").value
 var b1 = document.getElementById("mailFalt").value

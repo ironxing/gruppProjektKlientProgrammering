@@ -7,6 +7,13 @@ $(document).ready(()=>{
 
     $('.check').addClass('hidden');
 
+    function kollaAllt(){
+        kollaNamn();
+        kollaEmail();
+        kollaTel();
+        kollaMed();
+    }
+
     $('#namnFalt').on('keyup',()=>{
         kollaNamn();
     })
@@ -77,15 +84,17 @@ $(document).ready(()=>{
 
     $('#ziButn').click(function(e){
         e.preventDefault();
+        kollaAllt();
         if(isValidNamn&&isValidMail&&isValidTel&&isValidMed){
             saveInput();
             flyttaVanster();
             fadeaUt();
             nyaIn();
             visaText();
+            $('.check').addClass('hidden');
         }  
         else{
-            alert("Vänligen fyll i alla fält!");
+            alert("Vänligen fyll i alla fält i rätt format!");
         }
     })
 

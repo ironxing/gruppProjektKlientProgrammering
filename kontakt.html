@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="sv">
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,8 +12,8 @@
     <script src="js/bas.js"></script>
     <script src="js/kontakt.js"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-    
 </head>
+
 <body onload="displayCred(); initMap();">
     <!-- HEADER -->
     <div class="header" id="myHeader">
@@ -61,36 +61,36 @@
 
          <div class="friForm">        
             <!-- KONTAKT FORM -->                          
-                <section id="kontaktform">
+                <div id="kontaktform">
                     <form>
                         <p>Ditt Namn:</p>
                         <div class="kontaktInput" id="nameFaltdiv">
                             <input type="text" id="namnFalt"> 
-                            <img class="check" id="namnCheck" alt="check" width="20">
+                            <img class="check" id="namnCheck" src="pics/check.png" alt="check" width="20">
                         </div>
                         
                         <p>Din E-mail:</p>
                         <div class="kontaktInput">
                             <input type="email" id="mailFalt">
-                            <img class="check" id="mailCheck"  alt="check" width="20">
+                            <img class="check" id="mailCheck" src="pics/check.png" alt="check" width="20">
                         </div>
                         
                         <p>Ditt Telefonnummer:</p>
                         <div class="kontaktInput">
                             <input type="tel" id="telFalt">
-                            <img class="check" id="telCheck" alt="check" width="20">
+                            <img class="check" id="telCheck" src="pics/check.png" alt="check" width="20">
                         </div>
     
                         <p>Ditt Meddelande:</p> 
                         <div class="kontaktField">
                             <textarea id="medFalt"></textarea>
-                            <img class="check" id="medCheck"  alt="check" width="20">
+                            <img class="check" id="medCheck"  src="pics/check.png" alt="check" width="20">
                         </div>
     
                         <p><input id="ziButn" type="submit" value="Skicka Meddelande"></p>
                         <p id="sentText">Skickat!</p> 
                     </form>
-                </section>   
+                </div>   
             </div>
            
         <div id="map">  
